@@ -1,7 +1,8 @@
-﻿using System;
-
+﻿
 namespace HarvestSqlServerTypes
 {
+
+
     class Program
     {
     
@@ -86,10 +87,13 @@ AND A.name = @__assemblyname
         
         static void Main(string[] args)
         {
-            // SaveAssembly("Microsoft.SqlServer.Types", @"D:\Microsoft.SqlServer.Types.dll");
-            SaveAssembly("Microsoft.SqlServer.Types", @"/root/mygithub/Microsoft.SqlServer.Types.dll");
-            
-            System.Console.WriteLine("Hello World!");
+            if(System.Environment.OSVersion.Platform == System.PlatformID.Unix)
+                SaveAssembly("Microsoft.SqlServer.Types", @"/root/mygithub/Microsoft.SqlServer.Types.dll");
+            else
+                SaveAssembly("Microsoft.SqlServer.Types", @"D:\Microsoft.SqlServer.Types.dll");
+
+            System.Console.WriteLine("Finished getting Microsoft.SqlServer.Types.dll");
+            System.Console.ReadKey();
         }
     }
 }

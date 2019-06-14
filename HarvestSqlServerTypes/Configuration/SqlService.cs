@@ -42,14 +42,12 @@ namespace AnySqlWebAdmin
 
             return cs;
         } // End Function GetMsCs 
-
-
         
+
         private static string GetMyCS()
         {
-/*
             var csb = new MySql.Data.MySqlClient.MySqlConnectionStringBuilder();
-            
+
             if (System.Environment.OSVersion.Platform == System.PlatformID.Unix)
                 csb.Server = System.Environment.MachineName;
             else
@@ -69,7 +67,7 @@ namespace AnySqlWebAdmin
             csb.ConnectionIdleTimeout = 15;
             csb.ConnectionTimeout = 15;
             csb.DefaultCommandTimeout = 30;
-            
+
             csb.Pooling = true;
             csb.MinimumPoolSize = 1;
             csb.MaximumPoolSize = 100;
@@ -78,8 +76,6 @@ namespace AnySqlWebAdmin
             csb = null;
 
             return cs;
-            */
-            return "";
         } // End Function GetMsCs 
 
 
